@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Muhammad Salman Siddiq</title>
+<style>
+  :root {
+    box-sizing: border-box;
+    padding-top: env(safe-area-inset-top, 0px);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+    --bg: #ffffff;
+    --fg: #1a1a1a;
+    --muted: #5a5a5a;
+    --rule: #e2e2e2;
+    --link: #0b5cad;
+    --tag-bg: #f0f2f5;
+    --tag-fg: #3a3a3a;
+  }
+  :root:not([data-theme="light"]) {
+    @media (prefers-color-scheme: dark) {
+      --bg: #16181c;
+      --fg: #e6e6e6;
+      --muted: #9aa0a8;
+      --rule: #2c2f36;
+      --link: #6fb2f0;
+      --tag-bg: #23262c;
+      --tag-fg: #c3c8cf;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #16181c;
+    --fg: #e6e6e6;
+    --muted: #9aa0a8;
+    --rule: #2c2f36;
+    --link: #6fb2f0;
+    --tag-bg: #23262c;
+    --tag-fg: #c3c8cf;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-padding-top: env(safe-area-inset-top, 0px); }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--fg);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 17px;
+    line-height: 1.6;
+  }
+  .wrap {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 48px 22px 80px;
+  }
+  a { color: var(--link); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  header { display: flex; gap: 26px; align-items: flex-start; flex-wrap: wrap; }
+  .photo {
+    width: 128px; height: 128px; flex: none;
+    border-radius: 4px; object-fit: cover;
+    background: var(--tag-bg);
+    border: 1px solid var(--rule);
+  }
+  .photo-ph {
+    display: flex; align-items: center; justify-content: center;
+    color: var(--muted); font-size: 13px; text-align: center; font-family: system-ui, sans-serif;
+  }
+  .head-text { flex: 1 1 300px; min-width: 260px; }
+  h1 { font-size: 27px; margin: 0 0 4px; letter-spacing: 0.2px; }
+  .affil { color: var(--muted); margin: 0 0 10px; font-size: 16px; }
+  .links { font-family: system-ui, sans-serif; font-size: 14.5px; }
+  .links a { margin-right: 4px; }
+  .sep { color: var(--rule); margin: 0 6px; }
+
+  h2 {
+    font-size: 15px; text-transform: uppercase; letter-spacing: 1px;
+    font-family: system-ui, sans-serif; font-weight: 600;
+    margin: 40px 0 14px; padding-bottom: 6px; border-bottom: 1px solid var(--rule);
+  }
+  p { margin: 0 0 14px; }
+
+  .item { margin-bottom: 22px; }
+  .item h3 { font-size: 18px; margin: 0 0 2px; }
+  .item .meta {
+    font-family: system-ui, sans-serif; font-size: 13.5px; color: var(--muted);
+    margin: 0 0 8px;
+  }
+  .item p { margin: 0 0 8px; }
+  .item ul { margin: 0 0 8px; padding-left: 20px; }
+  .item li { margin-bottom: 4px; }
+
+  .tags { font-family: system-ui, sans-serif; font-size: 12.5px; }
+  .tag {
+    display: inline-block; background: var(--tag-bg); color: var(--tag-fg);
+    padding: 2px 8px; border-radius: 3px; margin: 0 5px 5px 0;
+  }
+
+  .exp { margin-bottom: 14px; }
+  .exp .role { font-family: system-ui, sans-serif; font-size: 15px; }
+  .exp .meta { font-family: system-ui, sans-serif; font-size: 13.5px; color: var(--muted); }
+
+  footer {
+    margin-top: 48px; padding-top: 16px; border-top: 1px solid var(--rule);
+    font-family: system-ui, sans-serif; font-size: 13px; color: var(--muted);
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <!-- Replace src with a real headshot: save it next to this file as photo.jpg -->
+    <div class="photo photo-ph">photo.jpg<br>(replace)</div>
+    <div class="head-text">
+      <h1>Muhammad Salman Siddiq</h1>
+      <p class="affil">Software Engineering, NUST Islamabad<br>Aspiring PhD student in conversational AI and agentic systems</p>
+      <p class="links">
+        <a href="mailto:salmansiddiq566@gmail.com">Email</a><span class="sep">/</span>
+        <a href="https://github.com/salmansi">GitHub</a><span class="sep">/</span>
+        <a href="https://linkedin.com/in/muhammad-salman-siddiq-43271b250/">LinkedIn</a><span class="sep">/</span>
+        <a href="cv.pdf">CV</a>
+      </p>
+    </div>
+  </header>
+
+  <h2>About</h2>
+  <p>I'm a final-year Software Engineering student at NUST Islamabad, graduating in 2026. I work on large language models applied to conversation and web interaction: multi-turn retrieval-augmented generation, agents that plan and act, and reinforcement learning for post-training. This summer I was a Mitacs Globalink research intern at Thompson Rivers University, building a multi-agent system for stroke-recovery education.</p>
+  <p>I'm looking for a PhD position where I can work on conversational agents that stay grounded and reliable in high-stakes domains such as health.</p>
+
+  <h2>Research Interests</h2>
+  <p>Conversational AI and multi-turn RAG; agentic search and reasoning; reinforcement learning for LLM post-training; personalization and memory in dialogue; grounded and safe generation for domain applications.</p>
+
+  <h2>Research</h2>
+
+  <div class="item">
+    <h3>Multi-agent system for stroke-recovery education</h3>
+    <p class="meta">Mitacs Globalink Research Intern, Mamatjan Lab, Thompson Rivers University &middot; Jun–Aug 2026</p>
+    <ul>
+      <li>Built a multi-turn system of seven specialized agents orchestrated with LangGraph, with a central orchestrator handling intent routing, retrieval, and response composition.</li>
+      <li>Designed a RAG pipeline over a curated clinical knowledge base and a two-layer memory that separates dynamic user context and preferences from locked medical facts.</li>
+      <li>Constructed a 109-question stroke-caregiver QA benchmark and an automated harness scoring accuracy, source grounding, and safety, with an ablation study across configurations.</li>
+      <li>Added a guardrail layer to validate and filter model outputs before they reach the user.</li>
+    </ul>
+    <div class="tags">
+      <span class="tag">LangGraph</span><span class="tag">RAG</span><span class="tag">Multi-agent</span><span class="tag">Evaluation</span><span class="tag">Safety</span>
+    </div>
+  </div>
+
+  <div class="item">
+    <h3>Adaptive web interaction with reinforcement learning</h3>
+    <p class="meta">Undergraduate Researcher, Final Year Project, NUST &middot; Sep 2025–May 2026 &middot; <a href="https://github.com/SalmanSi/FYP-WebNav-Agent">GitHub</a> &middot; <a href="https://huggingface.co/SalmanSi/Adaptive-Web-Interaction-RL">Model</a></p>
+    <ul>
+      <li>Built a web navigation agent, deployed as a Chrome extension, that observes the DOM and performs user-defined tasks on live websites through an Observe-Plan-Act-Review loop.</li>
+      <li>Engineered a Playwright pipeline that records expert LLM trajectories from real browser interactions for distilling reasoning into small language models via supervised fine-tuning.</li>
+      <li>Trained Qwen3 1.7B with SFT followed by PPO and GRPO, using an LLM-as-a-judge reward, and evaluated on a 200-task set filtered from InSTA-150k.</li>
+    </ul>
+    <div class="tags">
+      <span class="tag">RL (PPO, GRPO)</span><span class="tag">SFT</span><span class="tag">Agents</span><span class="tag">Distillation</span><span class="tag">Qwen3</span>
+    </div>
+  </div>
+
+  <div class="item">
+    <h3>Humanoid RAG chatbot avatar</h3>
+    <p class="meta">Deep Learning Research Intern, TUKL Lab, NUST &middot; Jun–Aug 2024</p>
+    <ul>
+      <li>Built a real-time speaking avatar combining a RAG pipeline with 3D interaction and open-source STT/TTS models.</li>
+      <li>Extended the knowledge base with curated data and numerical reasoning for more precise answers.</li>
+    </ul>
+    <div class="tags">
+      <span class="tag">RAG</span><span class="tag">STT/TTS</span><span class="tag">LLMs</span>
+    </div>
+  </div>
+
+  <h2>Selected Projects</h2>
+  <div class="item">
+    <h3><a href="https://github.com/SalmanSi/Search-Engine">News Search Engine</a></h3>
+    <p>A search engine indexing 100K+ news articles with custom parsing and inverted indices, serving queries in under 100ms. <span class="tags"><span class="tag">Django</span><span class="tag">IR</span><span class="tag">NLTK</span></span></p>
+  </div>
+  <div class="item">
+    <h3><a href="https://github.com/SalmanSi/Zero-Hunger">ZeroHunger Sync</a></h3>
+    <p>A food rescue platform matching providers with NGOs, with location-aware matching, atomic claim workflows, and CI/CD deployment on AWS. <span class="tags"><span class="tag">Node.js</span><span class="tag">PostgreSQL</span><span class="tag">Docker</span></span></p>
+  </div>
+
+  <h2>Experience</h2>
+  <div class="exp">
+    <div class="role">GenAI + Backend Engineer, Antematter</div>
+    <div class="meta">Oct 2025–Mar 2026 &middot; Built the backend and LLM billing engine of a production legal billing platform.</div>
+  </div>
+  <div class="exp">
+    <div class="role">GenAI + Backend Intern, Antematter</div>
+    <div class="meta">Jul–Sep 2025 &middot; Built a multi-agent data analytics copilot (natural language to SQL/Python).</div>
+  </div>
+
+  <h2>Honors</h2>
+  <p>
+    2nd Place in North Pakistan, Cambridge A-Level Examinations &middot;
+    Mitacs Globalink Research Internship (2026) &middot;
+    Dean's List, 7 of 8 semesters &middot;
+    4th Place, Kibo Robot Programming Challenge 2025
+  </p>
+
+  <footer>
+    Last updated September 2026 &middot; salmansiddiq566@gmail.com
+  </footer>
+
+</div>
+</body>
+</html>
