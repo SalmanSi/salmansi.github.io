@@ -2,107 +2,124 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light">
+<meta name="description" content="Muhammad Salman Siddiq — Software Engineering, NUST Islamabad. Research in conversational AI, agentic systems, and reinforcement learning for LLMs.">
 <title>Muhammad Salman Siddiq</title>
 <style>
   :root {
-    box-sizing: border-box;
-    padding-top: env(safe-area-inset-top, 0px);
-    padding-bottom: env(safe-area-inset-bottom, 0px);
     --bg: #ffffff;
-    --fg: #1a1a1a;
-    --muted: #5a5a5a;
-    --rule: #e2e2e2;
-    --link: #0b5cad;
-    --tag-bg: #f0f2f5;
-    --tag-fg: #3a3a3a;
-  }
-  :root:not([data-theme="light"]) {
-    @media (prefers-color-scheme: dark) {
-      --bg: #16181c;
-      --fg: #e6e6e6;
-      --muted: #9aa0a8;
-      --rule: #2c2f36;
-      --link: #6fb2f0;
-      --tag-bg: #23262c;
-      --tag-fg: #c3c8cf;
-    }
-  }
-  :root[data-theme="dark"] {
-    --bg: #16181c;
-    --fg: #e6e6e6;
-    --muted: #9aa0a8;
-    --rule: #2c2f36;
-    --link: #6fb2f0;
-    --tag-bg: #23262c;
-    --tag-fg: #c3c8cf;
+    --fg: #1c1c1c;
+    --muted: #555555;
+    --rule: #dddddd;
+    --link: #1a5fb4;
+    --tag-bg: #eef2f7;
+    --tag-fg: #2f3a48;
+    color-scheme: light;
   }
   * { box-sizing: border-box; }
-  html { scroll-padding-top: env(safe-area-inset-top, 0px); }
   body {
     margin: 0;
     background: var(--bg);
     color: var(--fg);
     font-family: Georgia, "Times New Roman", serif;
-    font-size: 17px;
-    line-height: 1.6;
+    font-size: 20px;
+    line-height: 1.65;
+    -webkit-text-size-adjust: 100%;
   }
   .wrap {
-    max-width: 760px;
+    max-width: 880px;
     margin: 0 auto;
-    padding: 48px 22px 80px;
+    padding: 56px 24px 80px;
   }
   a { color: var(--link); text-decoration: none; }
   a:hover { text-decoration: underline; }
 
-  header { display: flex; gap: 26px; align-items: flex-start; flex-wrap: wrap; }
+  /* Header */
+  header {
+    display: flex;
+    gap: 36px;
+    align-items: center;
+    padding-bottom: 32px;
+    border-bottom: 1px solid var(--rule);
+  }
   .photo {
-    width: 128px; height: 128px; flex: none;
-    border-radius: 4px; object-fit: cover;
-    background: var(--tag-bg);
+    width: 190px; height: 190px; flex: none;
+    border-radius: 6px;
+    object-fit: cover;
+    object-position: center;
     border: 1px solid var(--rule);
   }
-  .photo-ph {
-    display: flex; align-items: center; justify-content: center;
-    color: var(--muted); font-size: 13px; text-align: center; font-family: system-ui, sans-serif;
+  h1 { font-size: 40px; line-height: 1.2; margin: 0 0 8px; font-weight: normal; }
+  .affil { color: var(--muted); margin: 0 0 16px; font-size: 20px; line-height: 1.5; }
+  .links {
+    margin: 0;
+    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+    font-size: 18px;
   }
-  .head-text { flex: 1 1 300px; min-width: 260px; }
-  h1 { font-size: 27px; margin: 0 0 4px; letter-spacing: 0.2px; }
-  .affil { color: var(--muted); margin: 0 0 10px; font-size: 16px; }
-  .links { font-family: system-ui, sans-serif; font-size: 14.5px; }
-  .links a { margin-right: 4px; }
-  .sep { color: var(--rule); margin: 0 6px; }
+  .links a { white-space: nowrap; }
+  .sep { color: #bbbbbb; margin: 0 10px; }
 
+  /* Sections */
   h2 {
-    font-size: 15px; text-transform: uppercase; letter-spacing: 1px;
-    font-family: system-ui, sans-serif; font-weight: 600;
-    margin: 40px 0 14px; padding-bottom: 6px; border-bottom: 1px solid var(--rule);
+    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+    font-size: 24px; font-weight: 600;
+    margin: 48px 0 18px; padding-bottom: 8px;
+    border-bottom: 1px solid var(--rule);
   }
-  p { margin: 0 0 14px; }
+  p { margin: 0 0 16px; }
 
-  .item { margin-bottom: 22px; }
-  .item h3 { font-size: 18px; margin: 0 0 2px; }
-  .item .meta {
-    font-family: system-ui, sans-serif; font-size: 13.5px; color: var(--muted);
-    margin: 0 0 8px;
+  .item { margin-bottom: 34px; }
+  .item h3 { font-size: 23px; line-height: 1.35; margin: 0 0 4px; }
+  .meta {
+    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+    font-size: 17px; color: var(--muted);
+    margin: 0 0 10px;
   }
-  .item p { margin: 0 0 8px; }
-  .item ul { margin: 0 0 8px; padding-left: 20px; }
-  .item li { margin-bottom: 4px; }
+  .item-links {
+    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+    font-size: 17px; margin: 0 0 10px;
+  }
+  .item ul { margin: 0 0 12px; padding-left: 24px; }
+  .item li { margin-bottom: 6px; }
 
-  .tags { font-family: system-ui, sans-serif; font-size: 12.5px; }
+  .tags { font-family: system-ui, -apple-system, "Segoe UI", sans-serif; font-size: 15px; }
   .tag {
     display: inline-block; background: var(--tag-bg); color: var(--tag-fg);
-    padding: 2px 8px; border-radius: 3px; margin: 0 5px 5px 0;
+    padding: 3px 10px; border-radius: 4px; margin: 0 6px 6px 0;
   }
 
-  .exp { margin-bottom: 14px; }
-  .exp .role { font-family: system-ui, sans-serif; font-size: 15px; }
-  .exp .meta { font-family: system-ui, sans-serif; font-size: 13.5px; color: var(--muted); }
+  /* Experience / honors rows */
+  .row {
+    display: flex; justify-content: space-between; gap: 20px;
+    align-items: baseline; flex-wrap: wrap;
+  }
+  .row .date {
+    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+    font-size: 17px; color: var(--muted); white-space: nowrap;
+  }
+  .exp { margin-bottom: 22px; }
+  .exp h3 { font-size: 21px; margin: 0; }
+  .exp p { margin: 4px 0 0; }
+
+  .honors { margin: 0; padding-left: 24px; }
+  .honors li { margin-bottom: 8px; }
 
   footer {
-    margin-top: 48px; padding-top: 16px; border-top: 1px solid var(--rule);
-    font-family: system-ui, sans-serif; font-size: 13px; color: var(--muted);
+    margin-top: 56px; padding-top: 18px; border-top: 1px solid var(--rule);
+    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+    font-size: 16px; color: var(--muted);
+  }
+
+  @media (max-width: 640px) {
+    body { font-size: 18px; }
+    .wrap { padding: 32px 16px 56px; }
+    header { flex-direction: column; align-items: flex-start; gap: 20px; }
+    .photo { width: 150px; height: 150px; }
+    h1 { font-size: 32px; }
+    h2 { font-size: 22px; margin-top: 40px; }
+    .item h3 { font-size: 21px; }
+    .sep { margin: 0 6px; }
   }
 </style>
 </head>
@@ -110,26 +127,28 @@
 <div class="wrap">
 
   <header>
-    <!-- Replace src with a real headshot: save it next to this file as photo.jpg -->
-    <div class="photo photo-ph">photo.jpg<br>(replace)</div>
-    <div class="head-text">
+    <img class="photo" src="headshot.jpg" alt="Photo of Muhammad Salman Siddiq">
+    <div>
       <h1>Muhammad Salman Siddiq</h1>
-      <p class="affil">Software Engineering, NUST Islamabad<br>Aspiring PhD student in conversational AI and agentic systems</p>
+      <p class="affil">B.E. Software Engineering, NUST Islamabad<br>Prospective PhD student &middot; Conversational AI and agentic systems</p>
       <p class="links">
-        <a href="mailto:salmansiddiq566@gmail.com">Email</a><span class="sep">/</span>
-        <a href="https://github.com/salmansi">GitHub</a><span class="sep">/</span>
-        <a href="https://linkedin.com/in/muhammad-salman-siddiq-43271b250/">LinkedIn</a><span class="sep">/</span>
-        <a href="cv.pdf">CV</a>
+        <a href="mailto:salmansiddiq566@gmail.com">Email</a><span class="sep">|</span><a href="cv.pdf">CV</a><span class="sep">|</span><a href="https://github.com/salmansi">GitHub</a><span class="sep">|</span><a href="https://linkedin.com/in/muhammad-salman-siddiq-43271b250/">LinkedIn</a>
       </p>
     </div>
   </header>
 
   <h2>About</h2>
-  <p>I'm a final-year Software Engineering student at NUST Islamabad, graduating in 2026. I work on large language models applied to conversation and web interaction: multi-turn retrieval-augmented generation, agents that plan and act, and reinforcement learning for post-training. This summer I was a Mitacs Globalink research intern at Thompson Rivers University, building a multi-agent system for stroke-recovery education.</p>
-  <p>I'm looking for a PhD position where I can work on conversational agents that stay grounded and reliable in high-stakes domains such as health.</p>
+  <p>I am a final-year Software Engineering student at NUST Islamabad, graduating in 2026. I work on large language models applied to conversation and web interaction: multi-turn retrieval-augmented generation, agents that plan and act, and reinforcement learning for post-training. This summer I was a Mitacs Globalink research intern at Thompson Rivers University, building a multi-agent system for stroke-recovery education.</p>
+  <p>I am looking for a PhD position where I can work on conversational agents that stay grounded and reliable in high-stakes domains such as health.</p>
 
   <h2>Research Interests</h2>
-  <p>Conversational AI and multi-turn RAG; agentic search and reasoning; reinforcement learning for LLM post-training; personalization and memory in dialogue; grounded and safe generation for domain applications.</p>
+  <ul>
+    <li>Conversational AI and multi-turn RAG</li>
+    <li>Agentic search and reasoning</li>
+    <li>Reinforcement learning for LLM post-training</li>
+    <li>Personalization and memory in dialogue</li>
+    <li>Grounded and safe generation for domain applications</li>
+  </ul>
 
   <h2>Research</h2>
 
@@ -148,8 +167,11 @@
   </div>
 
   <div class="item">
-    <h3>Adaptive web interaction with reinforcement learning</h3>
-    <p class="meta">Undergraduate Researcher, Final Year Project, NUST &middot; Sep 2025–May 2026 &middot; <a href="https://github.com/SalmanSi/FYP-WebNav-Agent">GitHub</a> &middot; <a href="https://huggingface.co/SalmanSi/Adaptive-Web-Interaction-RL">Model</a></p>
+    <h3>WebSense: adaptive web interaction with reinforcement learning</h3>
+    <p class="meta">Undergraduate Researcher, Final Year Project, NUST &middot; Sep 2025–May 2026</p>
+    <p class="item-links">
+      <a href="https://web-sense-website.vercel.app/#hero">Project website</a><span class="sep">|</span><a href="https://github.com/SalmanSi/FYP-WebNav-Agent">Code</a><span class="sep">|</span><a href="https://huggingface.co/SalmanSi/Adaptive-Web-Interaction-RL">Model</a>
+    </p>
     <ul>
       <li>Built a web navigation agent, deployed as a Chrome extension, that observes the DOM and performs user-defined tasks on live websites through an Observe-Plan-Act-Review loop.</li>
       <li>Engineered a Playwright pipeline that records expert LLM trajectories from real browser interactions for distilling reasoning into small language models via supervised fine-tuning.</li>
@@ -173,35 +195,41 @@
   </div>
 
   <h2>Selected Projects</h2>
+
   <div class="item">
     <h3><a href="https://github.com/SalmanSi/Search-Engine">News Search Engine</a></h3>
-    <p>A search engine indexing 100K+ news articles with custom parsing and inverted indices, serving queries in under 100ms. <span class="tags"><span class="tag">Django</span><span class="tag">IR</span><span class="tag">NLTK</span></span></p>
+    <p>A search engine indexing 100K+ news articles with custom parsing and inverted indices, serving queries in under 100 ms.</p>
+    <div class="tags"><span class="tag">Django</span><span class="tag">IR</span><span class="tag">NLTK</span></div>
   </div>
+
   <div class="item">
     <h3><a href="https://github.com/SalmanSi/Zero-Hunger">ZeroHunger Sync</a></h3>
-    <p>A food rescue platform matching providers with NGOs, with location-aware matching, atomic claim workflows, and CI/CD deployment on AWS. <span class="tags"><span class="tag">Node.js</span><span class="tag">PostgreSQL</span><span class="tag">Docker</span></span></p>
+    <p>A food rescue platform matching providers with NGOs, with location-aware matching, atomic claim workflows, and CI/CD deployment on AWS.</p>
+    <div class="tags"><span class="tag">Node.js</span><span class="tag">PostgreSQL</span><span class="tag">Docker</span></div>
   </div>
 
   <h2>Experience</h2>
+
   <div class="exp">
-    <div class="role">GenAI + Backend Engineer, Antematter</div>
-    <div class="meta">Oct 2025–Mar 2026 &middot; Built the backend and LLM billing engine of a production legal billing platform.</div>
-  </div>
-  <div class="exp">
-    <div class="role">GenAI + Backend Intern, Antematter</div>
-    <div class="meta">Jul–Sep 2025 &middot; Built a multi-agent data analytics copilot (natural language to SQL/Python).</div>
+    <div class="row"><h3>GenAI + Backend Engineer, Antematter</h3><span class="date">Oct 2025 – Mar 2026</span></div>
+    <p>Built the backend and LLM billing engine of a production legal billing platform.</p>
   </div>
 
-  <h2>Honors</h2>
-  <p>
-    2nd Place in North Pakistan, Cambridge A-Level Examinations &middot;
-    Mitacs Globalink Research Internship (2026) &middot;
-    Dean's List, 7 of 8 semesters &middot;
-    4th Place, Kibo Robot Programming Challenge 2025
-  </p>
+  <div class="exp">
+    <div class="row"><h3>GenAI + Backend Intern, Antematter</h3><span class="date">Jul – Sep 2025</span></div>
+    <p>Built a multi-agent data analytics copilot (natural language to SQL/Python).</p>
+  </div>
+
+  <h2>Honors and Awards</h2>
+  <ul class="honors">
+    <li>Mitacs Globalink Research Internship, 2026</li>
+    <li>Dean's List, 7 of 8 semesters, NUST</li>
+    <li>4th Place, Kibo Robot Programming Challenge, 2025</li>
+    <li>2nd Place in North Pakistan, Cambridge A-Level Examinations</li>
+  </ul>
 
   <footer>
-    Last updated September 2026 &middot; salmansiddiq566@gmail.com
+    Last updated September 2026 &middot; <a href="mailto:salmansiddiq566@gmail.com">salmansiddiq566@gmail.com</a>
   </footer>
 
 </div>
